@@ -11,7 +11,7 @@ const App: FC = () => {
     <div className="app-root">
       <div className="mockup-container">
         <img
-          src="/src/assets/iphone_mock_up.png"
+          src="/assets/iphone_mock_up.png"
           alt="iphone mock up"
           className="iphone-mockup"
         />
@@ -20,12 +20,12 @@ const App: FC = () => {
         <div className="title-container">
           <div className="title-wrapper">
             <img
-              src="/src/assets/ttatta_icon.png"
+              src="/assets/ttatta_icon.png"
               alt="따따 아이콘"
               className="ttatta-icon"
             />
             <img
-              src="/src/assets/ttatta_logo.png"
+              src="/assets/ttatta_logo.png"
               alt="따따 로고"
               className="ttatta-logo"
             />
@@ -44,7 +44,7 @@ const App: FC = () => {
           <button className="inquiry-button" onClick={onInquiryButtonClicked}>
             문의하기
             <img
-              src="/src/assets/arrow-right-solid-full.svg"
+              src="/assets/arrow-right-solid-full.svg"
               style={{ width: "20px", filter: "invert(1)" }}
             />
           </button>
