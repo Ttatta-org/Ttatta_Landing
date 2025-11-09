@@ -1,0 +1,121 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.app-root {
+  width: 100%;
+  position: relative;
+}
+
+.mockup-container {
+  position: absolute;
+  top: 150px;
+  right: 0;
+}
+
+.iphone-mockup {
+  padding-left: 50px;
+  max-width: 100%;
+  box-sizing: border-box;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.center-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.title-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#fdddc100, #fdddc1ff);
+}
+
+.title-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ttatta-icon {
+  width: 120px;
+  margin-top: 400px;
+  margin-bottom: 30px;
+  animation: fade-in 0.2s ease-in-out;
+}
+
+.ttatta-logo {
+  width: 400px;
+  margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    width: 300px;
+  }
+
+  @media (max-width: 400px) {
+    width: 200px;
+  }
+}
+
+.hero-title {
+  color: #ff8072;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  word-break: keep-all;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.hero-subtitle {
+  color: #ff8072;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.inquiry-container {
+  width: 100%;
+  min-height: 50dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fdddc1;
+}
+
+.inquiry-button {
+  background: #ff9681;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px #00000010;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
