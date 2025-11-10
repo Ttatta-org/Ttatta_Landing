@@ -1,7 +1,12 @@
-import type { FC } from "react";
+import { useState, type FC } from "react";
 import "./App.css";
+import ReactModal from "react-modal";
+import PrivacyPolicyPopup from "./PrivacyPolicyPopup";
 
 const App: FC = () => {
+  const [isPrivacyPolicyPopupOpen, setIsPrivacyPolicyPopupOpen] =
+    useState(false);
+
   const onInquiryButtonClicked = () => {
     window.location.href =
       "mailto:2025ttatta@gmail.com?subject=따따 서비스 문의";
@@ -42,14 +47,33 @@ const App: FC = () => {
         </div>
         <div className="inquiry-container">
           <button className="inquiry-button" onClick={onInquiryButtonClicked}>
-            문의하기
+            <div className="inquiry-button-text-container">
+              <span>문의하기</span>
+              <sub className="inquiry-button-sub">2025ttatta@gmail.com</sub>
+            </div>
             <img
               src="/assets/arrow-right-solid-full.svg"
               style={{ width: "20px", filter: "invert(1)" }}
             />
           </button>
         </div>
+        <div className="footer-container">
+          <button
+            className="privacy-policy-link"
+            onClick={() => setIsPrivacyPolicyPopupOpen(true)}
+          >
+            개인정보처리방침
+          </button>
+        </div>
       </div>
+      <ReactModal
+        isOpen={isPrivacyPolicyPopupOpen}
+        onRequestClose={() => setIsPrivacyPolicyPopupOpen(false)}
+      >
+        <PrivacyPolicyPopup
+          onClose={() => setIsPrivacyPolicyPopupOpen(false)}
+        />
+      </ReactModal>
     </div>
   );
 };
