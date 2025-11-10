@@ -1,6 +1,5 @@
 import { useState, type FC } from "react";
 import "./App.css";
-import ReactModal from "react-modal";
 import PrivacyPolicyPopup from "./PrivacyPolicyPopup";
 
 const App: FC = () => {
@@ -66,14 +65,11 @@ const App: FC = () => {
           </button>
         </div>
       </div>
-      <ReactModal
-        isOpen={isPrivacyPolicyPopupOpen}
-        onRequestClose={() => setIsPrivacyPolicyPopupOpen(false)}
-      >
+      {isPrivacyPolicyPopupOpen && (
         <PrivacyPolicyPopup
           onClose={() => setIsPrivacyPolicyPopupOpen(false)}
         />
-      </ReactModal>
+      )}
     </div>
   );
 };
