@@ -24,7 +24,7 @@ const PrivacyPolicyPopup: FC<{
       className="w-full h-full p-6 box-border flex flex-row justify-center items-center"
     >
       <div className="max-h-[80dvh] max-w-[768px] px-6 py-4 bg-white rounded-2xl shadow-[0px_10px_10px_#00000010] flex flex-col justify-between items-center">
-        <div className="overflow-y-scroll">
+        <div className="overflow-y-scroll markdown-body">
           <ReactMarkdown>{content}</ReactMarkdown>
         </div>
         <div className="w-full flex justify-center items-center p-4 box-border">
